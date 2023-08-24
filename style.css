@@ -45,4 +45,5 @@ form{
     margin: 16px;
     display: flex;
     justify-content: center;
+    padding: 15px;
 }
