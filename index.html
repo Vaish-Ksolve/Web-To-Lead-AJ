@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web To Lead Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -12,8 +13,10 @@
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" 
             method="POST" onsubmit="beforeSubmit()">
 
+        <input type=hidden name='captcha_settings' 
+                value='{"keyname":"WebToLead","fallback":"true","orgId":"00D5j00000BbK2U","ts":""}'>
         <input type=hidden name="oid" value="00D5j00000BbK2U" />
-        <input type=hidden name="retURL" value="https://vaish-ksolve.github.io/Web-To-Lead-AJ/thanks.html/" />
+        <input type=hidden name="retURL" value="https://vaish-ksolve.github.io/Web-To-Lead-AJ/thanks.html" />
         <input type=hidden name="Lead_Date__c" class="outputdate" />
 
         <label for="first_name">First Name</label>
@@ -55,9 +58,17 @@
             </span>
         <br> -->
 
+        <div class="g-recaptcha" data-sitekey="6Lfsbc8nAAAAAH2dR-jnlqa6kYwjzMkojC2C3MHb"></div><br>
         <input type="submit" name="submit" class="submit">
 
     </form>
 
 </body>
 </html>
+
+
+
+<!-- 
+    site key : 6Lfsbc8nAAAAAH2dR-jnlqa6kYwjzMkojC2C3MHb
+    secret key : 6Lfsbc8nAAAAAGNccy4vrYRZYkDqpno8oAJgWX9p 
+-->
